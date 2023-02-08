@@ -60,11 +60,11 @@ public class Board {
         boolean wontLeaveBoard = !(idx == pegs.size() - 1 && p.getMovesRight() || idx == 0 && !p.getMovesRight() || p == Pegs.EMPTY.copy());
         boolean canJumpRight = p.getMovesRight() && (
                 idx + 1 <= pegs.size() - 1 && piece(idx + 1) == Pegs.EMPTY.copy() ||
-                        idx + 2 <= pegs.size() - 1 && piece(idx + 2) == Pegs.EMPTY.copy() && piece(idx + 1) != p
+                        idx + 2 <= pegs.size() - 1 && piece(idx + 2) == Pegs.EMPTY.copy()
         );
         boolean canJumpLeft = !p.getMovesRight() && (
                 idx - 1 >= 0 && piece(idx - 1) == Pegs.EMPTY.copy() ||
-                        idx - 2 >= 0 && piece(idx - 2) == Pegs.EMPTY.copy() && piece(idx - 1) != p
+                        idx - 2 >= 0 && piece(idx - 2) == Pegs.EMPTY.copy()
         );
         return wontLeaveBoard && (canJumpRight || canJumpLeft);
     }
