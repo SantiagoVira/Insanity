@@ -76,7 +76,6 @@ public class Board {
     private void fillBoard() {
         for (int i = 0; i < 4; i++) {
             pegs.add(Pegs.RED.copy());
-            System.out.println(piece(0).isRed());
         }
         for (int i = 0; i < 2; i++) {
             pegs.add(Pegs.EMPTY.copy());

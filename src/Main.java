@@ -20,8 +20,5 @@ public class Main {
 
         System.out.println(b);
 
-
-        // Stop game if none of one color can move
-
     }
 }
