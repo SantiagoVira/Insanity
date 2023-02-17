@@ -54,6 +54,15 @@ public class Board {
         return !isRed && !blueCanMove || isRed && !redCanMove;
     }
 
+    public boolean isWin() {
+        String win = "BBBB  RRRR";
+        boolean isWin = true;
+        for (int i = 0; i < pegs.size(); i++) {
+            if (!piece(i).isSymbol(win.substring(i, i + 1))) isWin = false;
+        }
+        return isWin;
+    }
+
     public boolean canMove(int idx) {
         // Pegs can jump over those of the same color
         Peg p = piece(idx);

@@ -21,4 +21,8 @@ public class Peg {
     public Boolean isRed() {
         return color.equals("\u001B[31m");
     }
+
+    public Boolean isSymbol(String target) {
+        return symbol.equals(target);
+    }
 }
